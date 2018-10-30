@@ -1,3 +1,14 @@
+# Quick Modification to Render From CSV
+I've just mode a quick modification to render from a CSV file that populates the "entries" section in the radar_visualization config.
+
+Uses d3 to async load the CSV and passes that on to radar_visualization.
+
+Reasonably quick/dirty proof of concept - could extend by:
+* Validating/sub-selecting the fields from the CSV with a format function in the D3 CSV call.
+* Supporting historical/multiple source files to enable transitions showing movement over time.
+
+---
+
 # Motivation
 
 At [Zalando](http://zalando.de), we maintain a [public Tech
