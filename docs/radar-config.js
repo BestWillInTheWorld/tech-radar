@@ -3,8 +3,6 @@ d3.queue()
     .await((err, csvData, populationData) => {
         console.log(csvData);
         if (err) throw err;
-
-
         radar_visualization({
             svg_id: "radar",
             width: 1450,
@@ -14,7 +12,7 @@ d3.queue()
                 grid: "#bbb",
                 inactive: "#ddd"
             },
-            title: "Zalando Tech Radar — 2018.10",
+            title: "Tech Radar — 2018.10",
             quadrants: [{
                     name: "Languages"
                 },
@@ -46,15 +44,11 @@ d3.queue()
                 }
             ],
             print_layout: true,
-            // zoomed_quadrant: 0,
+            zoomed_quadrant: 0,
             entries: csvData
         });
     });
 
-
-function loadEntriesFromCsv() {
-
-}
 
 var dummyEntries = [{
         quadrant: 3,
